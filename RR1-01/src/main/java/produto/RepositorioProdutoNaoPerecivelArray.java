@@ -41,8 +41,15 @@ public class RepositorioProdutoNaoPerecivelArray {
 	 * @return
 	 */
 	private int procurarIndice(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		int indice = -1;
+
+		for (int i = 0; i < index +1; i++){
+			if (this.produtos[i].getCodigo() == codigo){
+				indice = i;
+			}
+		}
+
+		return indice;
 	}
 
 	/**
@@ -52,16 +59,26 @@ public class RepositorioProdutoNaoPerecivelArray {
 	 * @return
 	 */
 	public boolean existe(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		boolean existe = false;
+
+		for (int i = 0; i < index +1; i++){
+			if (this.produtos[i].getCodigo() == codigo){
+				existe = true;
+			}
+		}
+
+		return existe;
 	}
 
 	/**
 	 * Insere um novo produto (sem se preocupar com duplicatas)
 	 */
 	public void inserir(ProdutoNaoPerecivel produto) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+
+		if ((index + 1) < produtos.length)
+			index++;
+			produtos[index + 1] = produto;
+		
 	}
 
 	/**
@@ -70,8 +87,17 @@ public class RepositorioProdutoNaoPerecivelArray {
 	 * utilizado.
 	 */
 	public void atualizar(ProdutoNaoPerecivel produto) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		boolean encontrado = false;
+
+		for (int i = 0; i < index+1; i++){
+			if (this.produtos[i].getCodigo() == produto.getCodigo()){
+					this.produtos[i] = produto;
+					encontrado = true;
+			}
+		}
+
+		if (!encontrado) throw new RuntimeException("O PRODUTO NÃO FOI ENCONTRADO");
+
 	}
 
 	/**
@@ -82,8 +108,26 @@ public class RepositorioProdutoNaoPerecivelArray {
 	 * @param codigo
 	 */
 	public void remover(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		int posicao = -1;
+		boolean removido = false;
+
+		for (int i = 0; i < index+1; i++){
+			if (this.produtos[i].getCodigo() == codigo){
+				this.produtos[i] = null;
+				posicao = i;
+				removido = true;
+			}
+		}
+
+		if (removido) {
+			for (int i = posicao; i < this.produtos.length-1; i++){
+				this.produtos[i] = this.produtos[i+1];
+				this.produtos[index] = null;
+				index--;
+			}
+		} else{
+			throw new RuntimeException("O ELEMENTO NÃO FOI ENCONTRADO!")
+		}
 	}
 
 	/**
@@ -94,8 +138,19 @@ public class RepositorioProdutoNaoPerecivelArray {
 	 * @return
 	 */
 	public ProdutoNaoPerecivel procurar(int codigo) {
-		// TODO Implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		ProdutoNaoPerecivel produto = null;
+
+		for (int i = 0; i < index + 1; i++){
+			if (this.produtos[i].getCodigo() == codigo){
+				produto = this.produtos[i];
+			}
+		}
+
+		if (produto == null){
+			throw new RuntimeException("O PRODUTO NÃO FOI ENCONTRADO");
+		}
+
+		return produto;
 	}
 
 }

@@ -40,8 +40,9 @@ public class TestRepositorioProdutos {
 
 	@Test
 	public void testProcurar() {
-		assertNull(repositorio.procurar(5));
-		repositorio.inserir(new Produto(5,"Feijao",10.0,"Feijão carioca"));
+		assertThrows(RuntimeException.class, ()-> repositorio.procurar(5));
+		Produto p = new Produto(5,"Feijao",10.0,"Feijão carioca");
+		repositorio.inserir(p);
 		assertNotNull(repositorio.procurar(5));		
 	}
 

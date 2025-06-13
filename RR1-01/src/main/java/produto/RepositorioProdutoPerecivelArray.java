@@ -44,7 +44,7 @@ public class RepositorioProdutoPerecivelArray {
 	private int procurarIndice(int codigo) {
 		int indice = -1;
 
-		for (int i = 0; i < this.produtos.length; i++){
+		for (int i = 0; i < index +1; i++){
 			if (this.produtos[i].getCodigo() == codigo){
 				indice = i;
 			}
@@ -62,7 +62,7 @@ public class RepositorioProdutoPerecivelArray {
 	public boolean existe(int codigo) {
 		boolean existe = false;
 
-		for (int i = 0; i < this.produtos.length; i++){
+		for (int i = 0; i < index +1; i++){
 			if (this.produtos[i].getCodigo() == codigo){
 				existe = true;
 			}
@@ -75,12 +75,10 @@ public class RepositorioProdutoPerecivelArray {
 	 * Insere um novo produto (sem se preocupar com duplicatas)
 	 */
 	public void inserir(ProdutoPerecivel produto) {
-		for (int i =0; i< this.produtos.length; i++){
-			if (this.produtos[i] == null){
-				this.produtos[i] = produto;
-				break;
-			}
-		}
+		if ((index + 1) < produtos.length)
+			index++;
+			produtos[index + 1] = produto;
+		
 	}
 
 	/**
@@ -91,14 +89,14 @@ public class RepositorioProdutoPerecivelArray {
 	public void atualizar(ProdutoPerecivel produto) {
 		boolean encontrado = false;
 
-		for (int i = 0; i < this.produtos.length; i++){
+		for (int i = 0; i < index+1; i++){
 			if (this.produtos[i].getCodigo() == produto.getCodigo()){
 					this.produtos[i] = produto;
 					encontrado = true;
 			}
 		}
 
-		if (!encontrado) throw new IllegalArgumentException("O PRODUTO NÃO FOI ENCONTRADO");
+		if (!encontrado) throw new RuntimeException("O PRODUTO NÃO FOI ENCONTRADO");
 
 
 	}
@@ -111,19 +109,27 @@ public class RepositorioProdutoPerecivelArray {
 	 * @param codigo
 	 */
 	public void remover(int codigo) {
-		int posicao = this.produtos.length;
+		int posicao = -1;
+		boolean removido = false;
 
-		for (int i = 0; i < this.produtos.length; i++){
+		for (int i = 0; i < index+1; i++){
 			if (this.produtos[i].getCodigo() == codigo){
 				this.produtos[i] = null;
-				posicao = i + 1;
+				posicao = i;
+				removido = true;
 			}
 		}
 
-		for (int i = posicao; i < this.produtos.length; i++){
-			this.produtos[i -1] = this.produtos[i];
+		if (removido) {
+			for (int i = posicao; i < this.produtos.length-1; i++){
+				this.produtos[i] = this.produtos[i+1];
+				this.produtos[index] = null;
+				index--;
+			}
+		} else{
+			throw new RuntimeException("O ELEMENTO NÃO FOI ENCONTRADO!")
 		}
-
+		
 	}
 
 	/**
@@ -136,14 +142,14 @@ public class RepositorioProdutoPerecivelArray {
 	public ProdutoPerecivel procurar(int codigo) {
 		ProdutoPerecivel produto = null;
 
-		for (int i = 0; i < this.produtos.length; i++){
+		for (int i = 0; i < index + 1; i++){
 			if (this.produtos[i].getCodigo() == codigo){
 				produto = this.produtos[i];
 			}
 		}
 
 		if (produto == null){
-			throw new IllegalArgumentException("O PRODUTO NÃO FOI ENCONTRADO")
+			throw new RuntimeException("O PRODUTO NÃO FOI ENCONTRADO");
 		}
 
 		return produto;
