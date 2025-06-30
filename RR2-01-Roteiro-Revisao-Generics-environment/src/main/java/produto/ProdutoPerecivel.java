@@ -2,7 +2,7 @@ package produto;
 
 import java.util.GregorianCalendar;
 
-public class ProdutoPerecivel extends Produto {
+public class ProdutoPerecivel<T> extends Produto {
 
 	private GregorianCalendar dataValidade;
 

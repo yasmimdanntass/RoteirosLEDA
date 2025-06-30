@@ -9,10 +9,10 @@ import java.util.Comparator;
  * @author Adalberto
  *
  */
-public class Vetor {
+public class Vetor <T extends Comparable<T>> {
 
 	// O array interno onde os objetos manipulados são guardados
-	private Object[] arrayInterno;
+	private T[] arrayInterno;
 
 	// O tamanho que o array interno terá
 	private int tamanho;
@@ -21,51 +21,114 @@ public class Vetor {
 	private int indice;
 
 	// O Comparators a serem utilizados
-	private Comparator comparadorMaximo;
-	private Comparator comparadorMinimo;
+	private Comparator<T> comparadorMax;
+	private Comparator<T> comparadorMin;
 
 	public Vetor(int tamanho) {
 		super();
 		this.tamanho = tamanho;
+		this.arrayInterno = (T[]) new Comparable[tamanho];
 		this.indice = -1;
 	}
 
-	public void setComparadorMaximo(Comparator comparadorMaximo) {
-		this.comparadorMaximo = comparadorMaximo;
+	public void setComparadorMax(Comparator<T> comparadorMax) {
+		this.comparadorMax = comparadorMax;
 	}
 
-	public void setComparadorMinimo(Comparator comparadorMinimo) {
-		this.comparadorMinimo = comparadorMinimo;
+	public void setComparadorMin(Comparator<T> comparadorMin) {
+		this.comparadorMin = comparadorMin;
 	}
 
 	// Insere um objeto no vetor
-	public void inserir(Object o) {
-		// TODO Remove the exception and implement your code
-		throw new UnsupportedOperationException("Not implemented yet!");
+	public void inserir(T o) {
+		this.indice++;
+		this.arrayInterno[indice] = o;
 	}
 
 	// Remove um objeto do vetor
-	public Object remover(Object o) {
-		// TODO Remove the exception and implement your code
-		throw new UnsupportedOperationException("Not implemented yet!");
+	public Object remover(T o) {
+		T elemento = null;
+		for (int i=0; i< arrayInterno.length; i++){
+			if (this.arrayInterno[i].equals(o)){
+				elemento = this.arrayInterno[i];
+				this.arrayInterno = null;
+			}
+		}
+		return elemento;
 	}
 
 	// Procura um elemento no vetor
-	public Object procurar(Object o) {
-		// TODO Remove the exception and implement your code
-		throw new UnsupportedOperationException("Not implemented yet!");
+	public T procurar(T o) {
+		T elemento = null;
+		for (int i=0; i< arrayInterno.length; i++){
+			if (this.arrayInterno[i].equals(o)){
+				elemento = this.arrayInterno[i];
+			}
+		}
+		return elemento;
 	}
 
 	// Diz se o vetor está vazio
 	public boolean isVazio() {
-		// TODO Remove the exception and implement your code
-		throw new UnsupportedOperationException("Not implemented yet!");
+		boolean out = false;
+		for (int i=0; i< arrayInterno.length; i++){
+			if (this.arrayInterno[i] != null){
+				out = true;
+			}
+		}
+		return out;
 	}
 
 	// Diz se o vetor está cheio
 	public boolean isCheio() {
-		// TODO Remove the exception and implement your code
-		throw new UnsupportedOperationException("Not implemented yet!");
+		boolean out = true;
+		for (int i=0; i< indice +1; i++){
+			if (this.arrayInterno == null){
+				out = false;
+			}
+		}
+		return out;
+	}
+
+	
+    public T getMaxVetor() {
+
+        T max = arrayInterno[0];
+        for (int i = 1; i <= indice; i++) {
+            if (comparadorMax.compare(arrayInterno[i], max) > 0) {
+                max = arrayInterno[i];
+            }
+        }
+        return max;
+    }
+
+	public T getMinVetor() {
+		
+        T min = arrayInterno[0];
+        for (int i = 1; i <= indice; i++) {
+            if (comparadorMin.compare(arrayInterno[i], min) > 0) {
+                min = arrayInterno[i]; 
+            }
+        }
+        return min;
+    }
+
+}
+
+class ComparadorMax implements Comparator<Aluno> {
+
+	@Override
+	public int compare(Aluno o1, Aluno o2) {
+		return (int) (o1.getMedia() - o2.getMedia());
+	}
+
+}
+
+class ComparadorMin implements Comparator<Aluno> {
+
+	@Override
+	public int compare(Aluno o1, Aluno o2) {
+		return (int) (o2.getMedia() - o1.getMedia());
 	}
 
 }
