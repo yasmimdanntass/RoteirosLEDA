@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sorting.test.StudentSortingTest" time="0.024" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sorting.test.StudentSortingTest" time="0.023" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/test-classes:/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/classes:/Users/yasmimdantas/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/yasmimdantas/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/test-classes:/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/classes:/Users/yasmimdantas/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/yasmimdantas/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/Users/yasmimdantas/dev/java/jdk-24.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire/surefirebooter-20250629223818007_3.jar /Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire 2025-06-29T22-38-17_965-jvmRun1 surefire-20250629223818007_1tmp surefire_0-20250629223818007_2tmp"/>
+    <property name="sun.java.command" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire/surefirebooter-20250701180103311_3.jar /Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire 2025-07-01T18-01-03_274-jvmRun1 surefire-20250701180103311_1tmp surefire_0-20250701180103311_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/test-classes:/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/classes:/Users/yasmimdantas/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/yasmimdantas/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/test-classes:/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/classes:/Users/yasmimdantas/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/yasmimdantas/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/yasmimdantas"/>
     <property name="user.language" value="pt"/>
@@ -23,13 +23,13 @@
     <property name="java.version.date" value="2025-04-15"/>
     <property name="java.home" value="/Users/yasmimdantas/dev/java/jdk-24.0.1.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment"/>
+    <property name="basedir" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire/surefirebooter-20250629223818007_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment/target/surefire/surefirebooter-20250701180103311_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/vx/4n359rts3p3c35w3py5m42f80000gn/T/"/>
     <property name="java.version" value="24.0.1"/>
-    <property name="user.dir" value="/Users/yasmimdantas/Downloads/roteiro1-main/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment"/>
+    <property name="user.dir" value="/Users/yasmimdantas/Desktop/RoteirosLEDA/R01-01-Rot-SimpleSorting-Bidirectional-Bubble-environment"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -57,7 +57,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testSort01" classname="sorting.test.StudentSortingTest" time="0.003"/>
+  <testcase name="testSort01" classname="sorting.test.StudentSortingTest" time="0.002"/>
   <testcase name="testSort02" classname="sorting.test.StudentSortingTest" time="0.0"/>
   <testcase name="testSort03" classname="sorting.test.StudentSortingTest" time="0.0"/>
   <testcase name="testSort04" classname="sorting.test.StudentSortingTest" time="0.0"/>
