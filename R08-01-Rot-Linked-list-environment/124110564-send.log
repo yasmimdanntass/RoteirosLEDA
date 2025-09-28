@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-04T17:50:36.354-0300</date>
+  <logger>YASMIM DANTAS DA COSTA SOUZA</logger>
+  <level>FINE</level>
+  <message>File 124110564-YASMIM DANTAS DA COSTA SOUZA.zip was received. It was sent by YASMIM DANTAS DA COSTA SOUZA from IP 192.168.0.101 at 04-08-2025 17*50*36</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-04T20:43:21.547-0300</date>
+  <logger>YASMIM DANTAS DA COSTA SOUZA</logger>
+  <level>FINE</level>
+  <message>File 124110564-YASMIM DANTAS DA COSTA SOUZA.zip was received. It was sent by YASMIM DANTAS DA COSTA SOUZA from IP 172.20.10.6 at 04-08-2025 20*43*21</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-08-04T23:08:22.921-0300</date>
+  <logger>YASMIM DANTAS DA COSTA SOUZA</logger>
+  <level>FINE</level>
+  <message>File 124110564-YASMIM DANTAS DA COSTA SOUZA.zip was received. It was sent by YASMIM DANTAS DA COSTA SOUZA from IP 192.168.0.101 at 04-08-2025 23*08*22</message>
+</record>
